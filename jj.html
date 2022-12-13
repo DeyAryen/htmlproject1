@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>CAlendar-JS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" />
+    <link rel="stylesheet" href="C:\Users\hp\csss.css" />
+</head>
+
+<body>
+    <div id="app">
+        <!-- WRAPPER -->
+        <div class="wrapper">
+            <div class="container-calendar">
+                <!-- EVENT SIDEBAR -->
+                <div class="calendar-style top-bar">
+                    <div class="bar-info">
+                        <span class="bar-info-num"></span>
+                        <span class="bar-info-month"></span>
+                        <span class="bar-info-num"></span>
+                    </div>
+                    <div class="eventButton">
+                        <a id="addEvent" href="javascript:;">Add event <span class="fa fa-plus"></span></a>
+                    </div>
+                    <div id="eventList"></div>
+                </div>
+
+                <!-- MODAL WINDOW -->
+                <div id="eventPopup" class="event-modal calendar-style">
+
+                    <a id="closePopup" href="javascript:;" class="btn">CLOSE <span class="fa fa-close"></span></a>
+                    <form id="addEvent">
+                        <p style="line-height: 50px; margin-top: 40px;">Tile: <input placeholder="Event name"
+                                type="text" name="name" style="width: 50%;" /></p>
+                        <p style="line-height: 50px">Initial date: <input type="date" name="date" style="width: 50%;" />
+                        </p>
+                        <input type="checkbox" style="float: left;" width="10px;">
+                        <p style="line-height: 50px">End date</p></input>
+                        <p style="line-height: 50px">End date: <input type="date" name="date" style="width: 50%;" /></p>
+                        <input type="checkbox" style="float: left;">
+                        <p style="line-height: 50px">Remind me when this event expire</p></input>
+                        <p style="line-height: 50px">End date: <input type="time" name="date" style="width: 50%;" /></p>
+                    </form>
+                    <p style="line-height: 20px">Description
+                        <textarea placeholder="Description of the event" name="description" cols="30" rows="10"
+                            maxlength="100"></textarea>
+                    </p>
+                    <p> Event type <select name="tag">
+                            <option value="event">event</option>
+                            <option value="important">important</option>
+                            <option value="birthday">birthday</option>
+                            <option value="festival">festival</option>
+                        </select>
+                    </p>
+
+                    <br />
+                    <a href="javascript:;" id="storeEvent" class="">SAVE <span class="fa fa-save"></span></a>
+                </div>
+
+            </div>
+        </div>
+        <!-- HEADER -->
+        <header>
+            <div class="wrapper">
+                <div class="monthyear">
+                    <div class="calendar-month">
+                        <div id="navigation">
+                            <span id="prev" class="prev fa fa-angle-left" aria-hidden="true"></span>
+                            <span class="btn" id="showMonths">August 2020</span>
+                            <span class="btn" id="showYears"></span>
+                            <span id="next" class="next fa fa-angle-right" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <span class="navigation-monthyear"></span>
+                </div>
+                <div>
+                    <a class="btn" href="javascript:;" id="today">TODAY</a>
+                </div>
+            </div>
+        </header>
+        <!-- CALENDAR -->
+        <div id="calendar" class="calendar calendar-style"></div>
+        <div class="months calendar-style"></div>
+        <div class="years calendar-style"></div>
+    </div>
+    <!-- JS -->
+    <script src="C:\Users\hp\jsss.js"></script>
+</body>
+
+</html>
